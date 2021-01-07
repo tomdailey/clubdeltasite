@@ -1,0 +1,160 @@
+:root {
+	--main-color: #2E8A60;
+	--sec-color: #355675;
+	--active-color: #aaaaaa;
+}
+
+body {
+	height: 100%;
+	max-width: 1700px;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	font-family: serif;
+	font-size: 20px;
+  background: white;
+}
+* {
+	box-sizing: border-box;
+}
+h1 {
+	font-family: Monospace;
+}
+/* HEADER old purple: #8B4086 */
+.header {
+	grid-area: h;
+	height: 0px;
+  font-size: 20px;
+	font-family: Monospace;
+	background-image: linear-gradient(#1C9C62, var(--main-color));
+	text-align: center;
+}
+#banner {
+	width: 100%;
+}
+#title {
+	padding-left: 10px;
+	margin: 12px;
+	height: 30px;
+}
+#tagline {
+	font-size: 12px;
+}
+/* NAVIGATION */
+.nav {
+	grid-area: n;
+	position: relative;
+	float: left;
+	font-family: Monospace;
+	font-size: 20px;
+	background-color: var(--main-color);
+	height: 100%;
+	text-align: center;
+}
+.nav ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+.nav ul li {
+	display: inline;
+	float: left;
+}
+.nav ul li a { 
+	display: block;
+	text-decoration: none;	
+	color: white;
+	margin: 0px;
+	height: 55px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.nav ul li a:hover { 
+	background-color: var(--active-color);
+	text-decoration: underline;
+	color: black;
+}
+.nav img {
+	height: 50px;
+}
+.nav .nonimg {
+	padding-top: 25px;
+}
+#location {
+	background-color: white;
+	text-decoration: underline;
+	color: black;
+}
+
+/* CONTENT */
+.page {
+		grid-area: c;
+		background-color: white;
+		padding: 10px;
+		margin-top: 0px;
+		width: 100%;
+}
+.bigLogo {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 90%;
+}
+.person-link {
+	display: inline;
+	margin: 0;
+}
+
+/* FOOTER */
+.footer {
+	grid-area: f;
+  padding: 4px;
+  text-align: center;
+  margin: 0px;
+	font-size: 20px;
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+.grid-container {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	grid-template-areas:
+		'h h'
+		'n n'
+		'c c'
+		'f f';
+	grid-gap: 0px;
+}
+
+@media only screen and (min-width: 800px) {
+	body {
+		width: 90%;
+		margin:auto;
+		display: center;
+		text-align: left;
+	}
+	.grid-container {
+		grid-template-areas:
+				'h h'
+				'n n'
+				'c c'
+				'f f';
+		grid-template-columns: 105px auto;
+		grid-template-rows: auto auto;
+	}
+	.content {
+		padding-left: 25px;
+	}
+}
+
+.bordered-table {
+	border-collapse: collapse;
+}
+.bordered-table, th, td {
+	border: 1px solid black;
+	padding: 5px;
+}
+
